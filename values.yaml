@@ -14,7 +14,7 @@ cats:
 observability:
   storageClass: "local-path"
   pdkey:
-  storageSize: 10Gi
+  storageSize: 2Gi
   retention: 5d
 trivy:
   enable: false
@@ -27,4 +27,4 @@ logging:
 metallb:
 # This only passes through to the bootstrap resources a single address pool, 
 # you can use a range if you you want to do something more complex
-  addresspool: 10.0.0.80/24
+  IPAddressPool: 10.0.0.80/24
