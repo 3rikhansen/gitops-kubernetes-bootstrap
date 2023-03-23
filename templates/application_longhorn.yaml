@@ -8,10 +8,10 @@ metadata:
   finalizers:
   - resources-finalizer.argocd.argoproj.io
 spec:
- project: runtime
+ project: default
 source:
   repoURL: 'https://charts.longhorn.io'
-  targetRevision: 1.3.2
+  targetRevision: 1.4.1
   helm:
     releaseName: longhorn
   chart: longhorn
