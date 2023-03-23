@@ -14,31 +14,6 @@ source:
   targetRevision: 1.3.2
   helm:
     releaseName: longhorn
-    values: |
-      fullnameOverride: longhorn
-      defaultSettings:
-        taintToleration: "home=true:NoSchedule"
-        priorityClass: system-node-critical
-      longhornManager:
-        tolerations:
-            - effect: NoSchedule
-              key: home
-              operator: Exists
-      longhornDriver:
-        tolerations:
-            - effect: NoSchedule
-              key: home
-              operator: Exists
-      longhornUI:
-        tolerations:
-            - effect: NoSchedule
-              key: home
-              operator: Exists
-      persistence:
-        reclaimPolicy: Retain
-      ingress:
-        enabled: true
-        host: ***
   chart: longhorn
 destination:
   server: 'https://kubernetes.default.svc'
