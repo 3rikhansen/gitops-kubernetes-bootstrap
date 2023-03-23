@@ -24,3 +24,7 @@ komodor:
   clustername:
 logging:
   enable: true
+metallb:
+# This only passes through to the bootstrap resources a single address pool, 
+# you can use a range if you you want to do something more complex
+  addresspool: 10.0.0.80/24
