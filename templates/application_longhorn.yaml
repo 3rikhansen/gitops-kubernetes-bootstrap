@@ -8,6 +8,9 @@ metadata:
   finalizers:
   - resources-finalizer.argocd.argoproj.io
 spec:
+ destination:
+  namespace: longhorn-system
+  server: https://kubernetes.default.svc
  project: default
  source:
    chart: longhorn
@@ -39,10 +42,7 @@ spec:
       ingress:
         enabled: true
         host: ***  
-destination:
-  server: 'https://kubernetes.default.svc'
-  namespace: longhorn-system
-syncPolicy:
+ syncPolicy:
   automated:
     prune: true
   syncOptions:
