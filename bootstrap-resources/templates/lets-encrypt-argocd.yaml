@@ -2,7 +2,7 @@ apiVersion: cert-manager.io/v1
 kind: Certificate
 metadata:
   name: agrocd.demo.bajas.org
-  namespace: cert-manager
+  namespace: default
 spec:
   # Secret names are always required.
   secretName: traefik-argocd-tls
