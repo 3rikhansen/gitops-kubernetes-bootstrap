@@ -16,7 +16,7 @@ observability:
   #storageClass: "local-path"
   storageClass: "longhorn"
   pdkey:
-  storageSize: 10Gi
+  storageSize: 1Gi
   retention: 5d
 trivy:
   enable: false
@@ -27,6 +27,7 @@ komodor:
 logging:
   enable: true
 metallb:
+  enable: false
 # This only passes through to the bootstrap resources a single address pool, 
 # you can use a range if you you want to do something more complex
-  addresspool: 10.0.0.80-10.0.0.90
+addresspool: 10.0.0.55-10.0.0.59
