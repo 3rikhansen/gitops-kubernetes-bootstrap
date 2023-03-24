@@ -4,17 +4,17 @@ domain:
 ## Set local if you wish to start the local path provisioner for "local-path" in your cluster 
 storage:
   local:
-    enable: false
+    enable: true
 # Application specific
 githubactionsrunner:
   enable: false
   token: ""
 cats:
-  #storageClass: "local-path"
-  storageClass: "default-storageclass"
+  storageClass: "local-path"
+  #storageClass: "default-storageclass"
 observability:
-  #torageClass: "local-path"
-  storageClass: "default-storageclass"
+  storageClass: "local-path"
+  #storageClass: "default-storageclass"
   pdkey:
   storageSize: 10Gi
   retention: 5d
