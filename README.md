@@ -84,3 +84,6 @@ Thanks to [this](https://blog.ediri.io/kube-prometheus-stack-and-argocd-23-how-t
 - kustomize
 - helm
 - sshuttle
+
+
+qlOv8E9VA3ebOt0R
