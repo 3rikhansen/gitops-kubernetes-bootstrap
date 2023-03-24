@@ -21,7 +21,7 @@ observability:
 trivy:
   enable: false
 nginx:
-  enable: false
+  enable: true
 komodor:
   enable: false
   key:
