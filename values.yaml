@@ -32,4 +32,4 @@ metallb:
   enable: false
 # This only passes through to the bootstrap resources a single address pool, 
 # you can use a range if you you want to do something more complex
-addresspool: 10.0.0.85-10.0.0.90
+  addresspool: 10.0.0.85-10.0.0.90
