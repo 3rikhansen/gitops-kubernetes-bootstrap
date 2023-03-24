@@ -20,6 +20,8 @@ observability:
   retention: 5d
 trivy:
   enable: false
+nginx:
+  enable: false
 komodor:
   enable: false
   key:
