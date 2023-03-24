@@ -5,7 +5,7 @@ metadata:
   namespace: cert-manager
 spec:
   # Secret names are always required.
-  secretName: grafana-letsencrypt
+  secretName: traefik-grafana-tls
   commonName: grafana.demo.bajas.org
   # At least one of a DNS Name, URI, or IP address is required.
   dnsNames:
