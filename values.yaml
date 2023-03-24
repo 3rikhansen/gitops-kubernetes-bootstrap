@@ -10,11 +10,11 @@ githubactionsrunner:
   enable: false
   token: ""
 cats:
-  storageClass: "local-path"
-  #storageClass: "default-storageclass"
+  #storageClass: "local-path"
+  storageClass: "default-storageclass"
 observability:
-  storageClass: "local-path"
-  #storageClass: "default-storageclass"
+  #storageClass: "local-path"
+  storageClass: "default-storageclass"
   pdkey:
   storageSize: 10Gi
   retention: 5d
@@ -29,4 +29,4 @@ logging:
 metallb:
 # This only passes through to the bootstrap resources a single address pool, 
 # you can use a range if you you want to do something more complex
-  addresspool: 10.0.0.80-10.0.0.85
+  addresspool: 10.0.0.85-10.0.0.90
