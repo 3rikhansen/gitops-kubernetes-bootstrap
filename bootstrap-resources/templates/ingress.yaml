@@ -6,12 +6,14 @@ metadata:
   namespace: observability
   annotations:
     kubernetes.io/ingress.class: "traefik" 
-    cert-manager.io/issuer: "letsencrypt-ci"
+    traefik.ingress.kubernetes.io/router.tls: "true"
+    cert-manager.io/issuer: "selfsigned"
+    #cert-manager.io/issuer: "letsencrypt-ci"
 spec:
   tls:
   - hosts:
     - grafana.{{ .Values.domain }}
-    secretName: traefik-grafana-tls
+    secretName: grafana.{{ .Values.domain }}
   rules:
   - host: grafana.{{ .Values.domain }}
     http:
@@ -31,12 +33,13 @@ metadata:
   namespace: argocd
   annotations:
     kubernetes.io/ingress.class: "traefik" 
-    cert-manager.io/issuer: "letsencrypt-ci"
+    traefik.ingress.kubernetes.io/router.tls: "true"
+    cert-manager.io/issuer: "selfsigned"
 spec:
   tls:
   - hosts:
     - argocd.{{ .Values.domain }}
-    secretName: traefik-argocd-tls
+    secretName: argocd.{{ .Values.domain }}
   rules:
   - host: argocd.{{ .Values.domain }}
     http:
