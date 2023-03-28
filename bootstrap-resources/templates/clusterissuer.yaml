@@ -1,6 +1,7 @@
 apiVersion: cert-manager.io/v1
-kind: ClusterIssuer
+kind: Issuer
 metadata:
-  name: letsencrypt-ci
+  name: selfsigned-issuer
+  namespace: sandbox
 spec:
   selfSigned: {}
