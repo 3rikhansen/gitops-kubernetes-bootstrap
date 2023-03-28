@@ -10,11 +10,11 @@ githubactionsrunner:
   enable: false
   token: ""
 cats:
-  #storageClass: "local-path"
-  storageClass: "longhorn"
+  storageClass: "local-path"
+  #storageClass: "longhorn"
 observability:
-  #storageClass: "local-path"
-  storageClass: "longhorn"
+  storageClass: "local-path"
+  #storageClass: "longhorn"
   pdkey:
   storageSize: 1Gi
   retention: 5d
@@ -23,7 +23,7 @@ trivy:
 nginx:
   enable: false
 traefik:
-  enable: false
+  enable: true
 komodor:
   enable: false
   key:
@@ -31,7 +31,7 @@ komodor:
 logging:
   enable: true
 metallb:
-  enable: false
+  enable: true
 # This only passes through to the bootstrap resources a single address pool, 
 # you can use a range if you you want to do something more complex
   addresspool: 10.0.0.85-10.0.0.90
