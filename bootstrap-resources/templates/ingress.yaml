@@ -11,7 +11,7 @@ spec:
   tls:
   - hosts:
     - grafana.{{ .Values.domain }}
-    secretName: nginx-grafana-tls
+    #secretName: nginx-grafana-tls
   rules:
   - host: grafana.{{ .Values.domain }}
     http:
@@ -36,7 +36,7 @@ spec:
   tls:
   - hosts:
     - argocd.{{ .Values.domain }}
-    secretName: nginx-argocd-tls
+    #secretName: nginx-argocd-tls
   rules:
   - host: argocd.{{ .Values.domain }}
     http:
