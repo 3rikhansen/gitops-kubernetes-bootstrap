@@ -1,8 +1,10 @@
 apiVersion: metallb.io/v1beta1
 kind: IPAddressPool
 metadata:
-  name: ip-pool
+  name: default-ip-space
   namespace: metallb-system
+  annotations:
+    argocd.argoproj.io/sync-wave: "1"
 spec:
   addresses:
-  - 10.0.0.85-10.0.0.90
+  - {{ .Values.metallb.addresspool}}
